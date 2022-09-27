@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, Box, Typography, Button } from '@mui/material'
-import img from '../../images/my1.jpg'
+import img from '../../images/my2.jpeg'
 
 const About = () => {
     return (
@@ -43,7 +43,7 @@ const About = () => {
                                             <Box sx={{
                                                 mt: "50px"
                                             }}>
-                                                <img src={img} alt="" width="350px" height="400px" />
+                                                <img src={img} alt="" width="350px" height="450px" />
                                             </Box>
                                         </Grid>
                 </Grid>

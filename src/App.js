@@ -4,6 +4,7 @@ import About from './component/About/About';
 import Services from './component/services/Services';
 import { useEffect } from 'react';
 import AOS from 'aos';
+import Footer from './component/footer/Footer';
 
 function App() {
   useEffect(()=>{
@@ -17,6 +18,7 @@ function App() {
       <Home />
       <About />
       <Services />
+      <Footer />
     </div>
   );
 }
