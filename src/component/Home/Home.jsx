@@ -2,13 +2,12 @@ import { Grid, Box, Typography, Button } from '@mui/material'
 import React from 'react'
 import DownloadIcon from '@mui/icons-material/Download';
 import img from '../../images/my1.jpg'
-// import book from '../../images/pdf.pdf'
 
 const Home = () => {
 
     const onDownload = () => {
         const link = document.createElement("a");
-        link.href = './pdf.pdf';
+        link.href = './Abdullah Tayyab resume.pdf';
         link.click();
     };
 
@@ -22,7 +21,6 @@ const Home = () => {
                 <Grid item xs={12} md={6}>
                     <Box sx={{
                         mt: "50px",
-                        // width:"600px",
                         margin: "auto",
                         ml: "70px"
                     }}>
@@ -45,9 +43,9 @@ const Home = () => {
                             sx={{
                                 color: "cyan"
                             }}>Developer</Typography>
-                        <Typography variant="body1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae totam ab soluta nemo consequatur in sed ullam nostrum itaque delectus.</Typography>
+                        <Typography variant="body1">Expert in Front-end development with MUI system</Typography>
                         <Button
-                         endIcon={<DownloadIcon />}
+                            endIcon={<DownloadIcon />}
                             sx={{
                                 mt: "20px",
                                 color: "white",

@@ -7,11 +7,8 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import img from '../../images/my.jpg'
 
 const pages = ['Home', 'About', 'Services', 'Blog', 'Contact me'];
 
@@ -70,20 +67,13 @@ const Navebar = () => {
                             }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}
-                                    sx={{
-                                        // '&:hover':{
-                                        //     background:"black"
-                                        // }
-                                    }}>
+                                <MenuItem key={page} onClick={handleCloseNavMenu}>
                                     <Typography textAlign="center"
                                         sx={{
                                             '&:hover': {
                                                 color: 'cyan',
                                                 border: "1px solid cyan",
                                                 padding: "10px",
-                                                // background:"black",
-                                                // color:"white"
                                             }
                                         }}>{page}</Typography>
                                 </MenuItem>
@@ -111,9 +101,11 @@ const Navebar = () => {
                         ))}
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
+                            <a href="https://wa.me/message/PYRPB5XT6Y54A1" target="_blank" style={{
+                                textDecoration: "none"
+                            }}>
                         <Button
                             sx={{
-                                // background:"cyan",
                                 border: "1px solid cyan",
                                 color: "white",
                                 fontSize: "16px",
@@ -124,8 +116,8 @@ const Navebar = () => {
                                 }
                             }}>
                                Contact me 
-                            {/* <a href="whatsapp://send?abid=03184579618&text=Hello%2C%20World!">Send Message</a> */}
                             </Button>
+                            </a>
                     </Box>
                 </Toolbar>
             </Container>

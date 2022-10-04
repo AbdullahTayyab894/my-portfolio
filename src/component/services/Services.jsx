@@ -4,7 +4,7 @@ import { data } from './api'
 const Services = () => {
     return (
         <div >
-            <Grid container sx={{
+            <Grid id="service" container sx={{
                 pl: "70px",
                 pt: "50px",
                 background: "black",
@@ -12,7 +12,6 @@ const Services = () => {
             }}>
                 <Grid item md={12} sx={{
                     textAlign: "center",
-                    pl: "50px"
                 }}>
 
                     <Typography variant='h3' sx={{
@@ -30,7 +29,7 @@ const Services = () => {
 
                     {
                         data.map((item, index) => {
-                            const { name, image } = item;
+                            const { name, image,detail } = item;
                             return (
                                 <Grid item xs={12} md={4} sx={{
                                     mt: "20px",
@@ -55,8 +54,7 @@ const Services = () => {
                                                         {name}
                                                     </Typography>
                                                     <Typography variant="body2" color="text.secondary">
-                                                        Lizards are a widespread group of squamate reptiles, with over 6,000
-                                                        species, ranging across all continents except Antarctica
+                                                       {detail}
                                                     </Typography>
                                                 </CardContent>
                                             </CardActionArea>

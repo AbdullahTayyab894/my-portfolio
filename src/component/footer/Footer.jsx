@@ -1,13 +1,12 @@
 import React from 'react'
-import { Avatar, Grid, Typography, Input, InputAdornment } from '@mui/material'
+import { Avatar, Grid, Button, Input, InputAdornment, Box } from '@mui/material'
 import SendRoundedIcon from '@mui/icons-material/SendRounded';
-
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import GitHubIcon from '@mui/icons-material/GitHub';
-import { Box } from '@mui/system';
+import '../../App.css'
 
 const Footer = () => {
     return (
@@ -25,30 +24,64 @@ const Footer = () => {
                 <Grid md={3} xs={10}>
                     <Box sx={{
                         boxShadow: "0px 10px 15px cyan",
-                        mb:"40px",
-                        pb:"30px",
+                        mb: "40px",
+                        pb: "30px",
                     }}>
-                        <Typography>
-                            About me
-                        </Typography>
-                        <Typography>
-                            Services
-                        </Typography>
-                        <Typography>
+                        <a href="#about" smooth
+                            style={{
+                                textDecoration: "none"
+                            }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>
+                                About
+                            </Button>
+                        </a>
+                        <a href="#service"
+                            style={{
+                                textDecoration: "none"
+                            }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>
+                                Services
+                            </Button>
+                        </a>
+                        <Button sx={{
+                            my: 2,
+                            color: 'white',
+                            marginRight: "5px",
+                            '&:hover': {
+                                color: 'cyan',
+                                border: "1px solid cyan"
+                            }
+                        }}>
                             Blogs
-                        </Typography>
+                        </Button>
                     </Box>
                 </Grid>
                 <Grid md={3} xs={10} sx={{
                     display: "flex",
-                    ml: "150px",
-                    mb:"40px"
+                    ml: "120px",
+                    mb: "40px"
                 }}>
                     <Box sx={{
                         boxShadow: "0px 10px 15px cyan",
-                        display:"flex",
-                        height:"70px",
-                        pt:"30px"
+                        display: "flex",
+                        height: "70px",
+                        pt: "30px"
                     }}>
                         <Avatar><FacebookIcon /></Avatar>
                         <Avatar><InstagramIcon /></Avatar>
@@ -62,15 +95,15 @@ const Footer = () => {
                     }}>
                     <Box sx={{
                         boxShadow: "0px 10px 15px cyan",
-                        width:"400px",
+                        width: "350px",
                     }}>
-                        <Typography>Contact me</Typography>
+                        <Button>Contact me</Button>
                         <Input
                             id="input-with-icon-adornment"
                             placeholder='Enter your email'
                             sx={{
                                 background: "white",
-                                width: "400px",
+                                width: "340px",
                                 height: "50px",
                                 paddingLeft: "20px",
                                 marginTop: "20px",
