@@ -7,12 +7,12 @@ const Home = () => {
 
     const onDownload = () => {
         const link = document.createElement("a");
-        link.href = './Abdullah Tayyab resume.pdf';
+        link.href = './Abdullah Tayyab Resume.pdf';
         link.click();
     };
 
     return (
-        <div>
+        <div id='home'>
             <Grid container sx={{
                 background: "black",
                 pt: "100px",

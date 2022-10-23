@@ -1,10 +1,10 @@
 import { Box, Card, Typography, CardContent, CardMedia, CardActionArea, Grid } from '@mui/material'
 import { data } from './api'
 
-const Services = () => {
+const Skills = () => {
     return (
         <div >
-            <Grid id="service" container sx={{
+            <Grid id="skills" container sx={{
                 pl: "70px",
                 pt: "50px",
                 background: "black",
@@ -17,7 +17,7 @@ const Services = () => {
                     <Typography variant='h3' sx={{
                         color: "cyan"
                     }}>
-                        Services
+                        Skills
                     </Typography>
                     <Typography sx={{
                         color: "white"
@@ -70,4 +70,4 @@ const Services = () => {
     )
 }
 
-export default Services
+export default Skills

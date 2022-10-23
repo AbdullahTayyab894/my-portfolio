@@ -1,16 +1,12 @@
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
-
-const pages = ['Home', 'About', 'Services', 'Blog', 'Contact me'];
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { List, ListItem, MenuItem, Button, Box } from '@mui/material';
 
 const Navebar = () => {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -66,58 +62,130 @@ const Navebar = () => {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center"
-                                        sx={{
-                                            '&:hover': {
-                                                color: 'cyan',
-                                                border: "1px solid cyan",
-                                                padding: "10px",
-                                            }
-                                        }}>{page}</Typography>
-                                </MenuItem>
-                            ))}
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <List>
+                                    <a href="#home" style={{
+                                        textDecoration: "none"
+                                    }}>
+                                        <ListItem>Home</ListItem>
+                                    </a>
+                                    <a href="#about" style={{
+                                        textDecoration: "none"
+                                    }}>
+                                        <ListItem>About</ListItem>
+                                    </a>
+                                    <a href="#skills" style={{
+                                        textDecoration: "none"
+                                    }}>
+                                        <ListItem>Skills</ListItem>
+                                    </a>
+                                    <a href="#projects" style={{
+                                        textDecoration: "none"
+                                    }}>
+                                        <ListItem>Projects</ListItem>
+                                    </a>
+                                    <a href="#contact" style={{
+                                        textDecoration: "none"
+                                    }}>
+                                        <ListItem>Contact</ListItem>
+                                    </a>
+                                </List>
+                            </MenuItem>
                         </Menu>
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{
-                                    my: 2,
-                                    color: 'white',
-                                    display: 'block',
-                                    marginRight: "5px",
-                                    '&:hover': {
-                                        color: 'cyan',
-                                        border: "1px solid cyan"
-                                    }
-                                }}
-                            >
-                                {page}
-                            </Button>
-                        ))}
+                        <a href="#home" style={{
+                            textDecoration: "none"
+                        }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                display: 'block',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>Home</Button>
+                        </a>
+                        <a href="#about" style={{
+                            textDecoration: "none"
+                        }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                display: 'block',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>About</Button>
+                        </a>
+                        <a href="#skills" style={{
+                            textDecoration: "none"
+                        }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                display: 'block',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>Skills</Button>
+                        </a>
+                        <a href="#projects" style={{
+                            textDecoration: "none"
+                        }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                display: 'block',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>Projects</Button>
+                        </a>
+                        <a href="#contact" style={{
+                            textDecoration: "none"
+                        }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                display: 'block',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>Contact</Button>
+                        </a>
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
-                            <a href="https://wa.me/message/PYRPB5XT6Y54A1" target="_blank" style={{
-                                textDecoration: "none"
-                            }}>
-                        <Button
-                            sx={{
-                                border: "1px solid cyan",
-                                color: "white",
-                                fontSize: "16px",
-                                '&:hover': {
-                                    background: "cyan",
-                                    color: "black",
-                                    fontSize: "16px"
-                                }
-                            }}>
-                               Contact me 
+                        <a href="https://wa.me/message/PYRPB5XT6Y54A1" target="_blank" style={{
+                            textDecoration: "none"
+                        }}>
+                            <Button
+                                sx={{
+                                    border: "1px solid cyan",
+                                    color: "white",
+                                    fontSize: "16px",
+                                    '&:hover': {
+                                        background: "cyan",
+                                        color: "black",
+                                        fontSize: "16px"
+                                    }
+                                }}>
+                                CONTACT
+                                <WhatsAppIcon sx={{
+                                    ml: "10px",
+                                }} />
                             </Button>
-                            </a>
+                        </a>
                     </Box>
                 </Toolbar>
             </Container>

@@ -1,16 +1,15 @@
 import React from 'react'
-import { Avatar, Grid, Button, Input, InputAdornment, Box } from '@mui/material'
-import SendRoundedIcon from '@mui/icons-material/SendRounded';
+import { Avatar, Grid, Button, Box } from '@mui/material'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import '../../App.css'
 
 const Footer = () => {
     return (
-        <div>
+        <div id='contact'>
             <Grid container sx={{
                 justifyContent: "center",
                 textAlign: "center",
@@ -21,13 +20,31 @@ const Footer = () => {
                 color: "white",
 
             }}>
-                <Grid md={3} xs={10}>
+                <Grid md={5} xs={10}>
                     <Box sx={{
                         boxShadow: "0px 10px 15px cyan",
                         mb: "40px",
-                        pb: "30px",
+                        pb: "15px",
+                        pt: "15px",
+                        mr: "10px"
                     }}>
-                        <a href="#about" smooth
+                        <a href="#home" smooth
+                            style={{
+                                textDecoration: "none"
+                            }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>
+                                Home
+                            </Button>
+                        </a>
+                        <a href="#about"
                             style={{
                                 textDecoration: "none"
                             }}>
@@ -43,7 +60,7 @@ const Footer = () => {
                                 About
                             </Button>
                         </a>
-                        <a href="#service"
+                        <a href="#skills"
                             style={{
                                 textDecoration: "none"
                             }}>
@@ -56,78 +73,68 @@ const Footer = () => {
                                     border: "1px solid cyan"
                                 }
                             }}>
-                                Services
+                                Skills
                             </Button>
                         </a>
-                        <Button sx={{
-                            my: 2,
-                            color: 'white',
-                            marginRight: "5px",
-                            '&:hover': {
-                                color: 'cyan',
-                                border: "1px solid cyan"
-                            }
-                        }}>
-                            Blogs
-                        </Button>
+                        <a href="#projects"
+                            style={{
+                                textDecoration: "none"
+                            }}>
+                            <Button sx={{
+                                my: 2,
+                                color: 'white',
+                                marginRight: "5px",
+                                '&:hover': {
+                                    color: 'cyan',
+                                    border: "1px solid cyan"
+                                }
+                            }}>
+                                Projects
+                            </Button>
+                        </a>
                     </Box>
                 </Grid>
-                <Grid md={3} xs={10} sx={{
+                <Grid md={5} xs={10} sx={{
                     display: "flex",
-                    ml: "120px",
-                    mb: "40px"
+                    mb: "40px",
+                    ml: "10px"
                 }}>
                     <Box sx={{
                         boxShadow: "0px 10px 15px cyan",
                         display: "flex",
                         height: "70px",
-                        pt: "30px"
+                        width: "100%",
+                        justifyContent: "space-between",
+                        padding: "30px 20px 0px 20px"
                     }}>
-                        <Avatar><FacebookIcon /></Avatar>
-                        <Avatar><InstagramIcon /></Avatar>
-                        <Avatar><TwitterIcon /></Avatar>
-                        <Avatar><WhatsAppIcon /></Avatar>
-                        <Avatar><GitHubIcon /></Avatar>
-                    </Box>
-                </Grid>
-                <Grid md={3} xs={10}
-                    sx={{
-                    }}>
-                    <Box sx={{
-                        boxShadow: "0px 10px 15px cyan",
-                        width: "350px",
-                    }}>
-                        <Button>Contact me</Button>
-                        <Input
-                            id="input-with-icon-adornment"
-                            placeholder='Enter your email'
-                            sx={{
-                                background: "white",
-                                width: "340px",
-                                height: "50px",
-                                paddingLeft: "20px",
-                                marginTop: "20px",
-                                marginBottom: "30px",
-                                cursor: "pointer"
-                            }}
-
-                            endAdornment={
-                                <InputAdornment position="end"
-                                    sx={{
-                                        background: "cyan",
-                                        height: "30px",
-                                        padding: "10px 10px 10px 10px",
-                                        color: "black"
-
-                                    }}>
-                                    Get Started
-                                    <SendRoundedIcon
-                                        sx={{
-                                            paddingLeft: "10px"
-                                        }} />
-                                </InputAdornment>
-                            }
-                        />
+                        <Avatar>
+                            <a href="https://www.facebook.com/" target="_Blank" style={{
+                                textDecoration: "none"
+                            }}>
+                                <FacebookIcon />
+                            </a>
+                        </Avatar>
+                        <Avatar>
+                            <a href="https://www.instagram.com/" target="_Blank" style={{
+                                textDecoration: "none"
+                            }}>
+                                <InstagramIcon />
+                            </a>
+                        </Avatar>
+                        <Avatar>
+                            <a href="https://www.linkedin.com/feed/" target="_Blank" style={{
+                                textDecoration: "none"
+                            }}>
+                                <LinkedInIcon />
+                            </a>
+                        </Avatar>
+                        <Avatar>
+                            <a href="https://github.com/AbdullahTayyab894" target="_Blank" style={{
+                                textDecoration: "none"
+                            }}>
+                                <GitHubIcon />
+                            </a>
+                        </Avatar>
                     </Box>
                 </Grid>
             </Grid>
