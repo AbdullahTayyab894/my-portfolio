@@ -5,11 +5,63 @@ import { projectdata } from './projectapi'
 
 const Projects = () => {
     return (
-        <div id='projects'>
-            <Grid id="service" container sx={{
+        <div id='projects' style={{
+            marginTop:"20px"
+        }}>
+            <Typography variant='h3' sx={{
+                color: "black",
+                textAlign:"center"
+            }}>
+                Projects
+            </Typography>
+            <Grid container rowSpacing={3} columnSpacing={{ xs: 1, sm: 2, md: 3 }} sx={{
+                padding: "40px",
+                textAlign: "center",
+            }}>
+                {
+                    projectdata.map((item, index) => {
+                        const { name, image, url } = item;
+                        return (
+                            <Grid item xs={12} sm={6} md={4} >
+                                <Card 
+                                data-aos="fade-right"
+                                data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">
+                                    <CardActionArea>
+                                        <CardMedia
+                                            component="img"
+                                            height="350"
+                                            image={image}
+                                            alt="green iguana"
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {name}
+                                            </Typography>
+                                            <a href={item.url} target="_blank" style={{
+                                                textDecoration: "none"
+                                            }}>
+                                                <Button variant='contained' sx={{
+                                                    width: "130px",
+                                                    color: "white",
+                                                }}>
+                                                    Open
+                                                </Button>
+                                            </a>
+                                        </CardContent>
+                                    </CardActionArea>
+                                </Card>
+                            </Grid>
+                        )
+                    })
+                }
+            </Grid>
+            {/* <Grid id="service" container sx={{
                 pl: "70px",
                 pt: "50px",
             }}>
+
+
                 <Grid item md={12} sx={{
                     textAlign: "center",
                 }}>
@@ -30,7 +82,7 @@ const Projects = () => {
                                     mb: "30px"
                                 }}>
                                     <Card sx={{
-                                        width: "340px",
+                                        // width: "340px",
                                     }}>
                                         <CardActionArea>
                                             <CardMedia
@@ -66,7 +118,7 @@ const Projects = () => {
                         })
                     }
                 </Grid>
-            </Grid>
+            </Grid> */}
         </div>
     )
 }
