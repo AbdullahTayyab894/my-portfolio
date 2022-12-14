@@ -6,6 +6,7 @@ import ss5 from '../../images/ss5.PNG'
 import ss6 from '../../images/ss6.PNG'
 import ss7 from '../../images/ss7.png'
 import ss8 from '../../images/ss8.png'
+import ss9 from '../../images/ss9.png'
 
 export const projectdata = [
     {
@@ -47,5 +48,10 @@ export const projectdata = [
         name:"To Do List",
         image:ss8,
         url:"https://reactjs-any-do-list.netlify.app/"
+    },
+    {
+        name:"Gym site",
+        image: ss9,
+        url:"https://gym-site-using-reactjs.netlify.app/"
     }
 ]

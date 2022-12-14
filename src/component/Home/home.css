@@ -1,0 +1,8 @@
+.home{
+    display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  align-items: stretch;
+  margin: 2%;
+  flex-wrap: wrap;
+}
