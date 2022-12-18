@@ -6,7 +6,6 @@ import { useEffect } from 'react';
 import AOS from 'aos';
 import Footer from './component/footer/Footer';
 import Projects from './component/projects/Projects';
-
 function App() {
   useEffect(()=>{
     AOS.init({
